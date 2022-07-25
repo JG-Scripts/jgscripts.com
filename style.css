@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: black;
+  color: rgb(234, 232, 222);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 50px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  display: block;
+  width: 100%;
+}
+
+header .brand {
+  display: block;
+  width: 200px;
+}
+
+header .discord {
+  display: block;
+}
+
+/* Homepage */
+
+.homepage h1.main-title {
+  font-size: 6rem;
+  line-height: 7rem;
+  letter-spacing: -0.05rem;
+  font-weight: 700;
+  margin: 75px 0;
+
+  background: #ff512f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #ff512f,
+    #f09819
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #ff512f,
+    #f09819
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.homepage .scripts-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.homepage .script {
+}
+
+.homepage .script img {
+  display: block;
+  border-radius: 10px;
+  background: grey;
+  height: 350px;
+}
+
+/* Footer */
+
+footer {
+  margin-top: auto;
+  color: #999;
+  padding-top: 50px;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 20px;
+  }
+
+  header .brand {
+    width: 150px;
+  }
+
+  .homepage h1.main-title {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    margin: 50px 0;
+  }
+
+  .homepage .scripts-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}

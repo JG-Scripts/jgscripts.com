@@ -33,6 +33,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 70px;
 }
 
 header img {
@@ -56,8 +57,7 @@ header .discord {
   line-height: 7rem;
   letter-spacing: -0.05rem;
   font-weight: 700;
-  margin: 75px 0;
-
+  margin-bottom: 75px;
   background: #ff512f; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
@@ -91,6 +91,31 @@ header .discord {
   height: 350px;
 }
 
+.script-page {
+}
+
+.script-page .script-name {
+  font-size: 4.5rem;
+  line-height: 5.75rem;
+  letter-spacing: -0.05rem;
+  font-weight: 700;
+  margin-bottom: 75px;
+  background: #ff512f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #ff512f,
+    #f09819
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #ff512f,
+    #f09819
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 /* Footer */
 
 footer {
@@ -101,7 +126,7 @@ footer {
 
 /* Mobile */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .container {
     padding: 20px;
   }

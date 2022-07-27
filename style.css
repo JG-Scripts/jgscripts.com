@@ -8,7 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: black;
+  background: #121212;
   color: rgb(234, 232, 222);
   -webkit-font-smoothing: antialiased;
 }
@@ -25,7 +25,7 @@ a {
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-  max-width: 1500px;
+  max-width: 1700px;
   padding: 50px;
 }
 
@@ -53,11 +53,11 @@ header .discord {
 /* Homepage */
 
 .homepage h1.main-title {
-  font-size: 6rem;
+  font-size: 7rem;
   line-height: 7rem;
   letter-spacing: -0.05rem;
   font-weight: 700;
-  margin-bottom: 75px;
+  padding: 50px 0 100px 0;
   background: #ff512f; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
@@ -94,26 +94,100 @@ header .discord {
 .script-page {
 }
 
-.script-page .script-name {
-  font-size: 4.5rem;
-  line-height: 5.75rem;
+.script-page h1.script-name {
+  font-size: 5rem;
+  line-height: 5rem;
   letter-spacing: -0.05rem;
   font-weight: 700;
-  margin-bottom: 75px;
-  background: #ff512f; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #ff512f,
-    #f09819
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #ff512f,
-    #f09819
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 0 0 75px 0;
+}
+
+.script-page .advanced-garages .gradient-text,
+.script-page .advanced-garages .script-version {
+  background: #ff512f;
+  background: -webkit-linear-gradient(to top, #ff512f, #f09819);
+  background: linear-gradient(to top, #ff512f, #f09819);
+}
+
+.script-page .pro-scoreboard .gradient-text,
+.script-page .pro-scoreboard .script-version {
+  background: #8e9eab;
+  background: -webkit-linear-gradient(to bottom, #eef2f3, #8e9eab);
+  background: linear-gradient(to bottom, #eef2f3, #8e9eab);
+}
+
+.script-page .script-name .gradient-text {
+  vertical-align: middle;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+.script-page h1.script-name .script-version {
+  vertical-align: middle;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 5px 15px;
+  border-radius: 10px;
+  letter-spacing: 0;
+  color: #121212;
+}
+
+.script-page .split-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.script-page .slider {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.script-page .slider .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.script-page .slider .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.script-page .slider .btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+}
+.script-page .slider .btn:active {
+  transform: scale(1.1);
+}
+.script-page .slider .btn-prev {
+  top: 45%;
+  left: 2%;
+}
+.script-page .slider .btn-next {
+  top: 45%;
+  right: 2%;
+}
+
+.script-page .script-description {
+  text-align: left;
+  line-height: 2rem;
+  font-size: 1.25rem;
 }
 
 /* Footer */
@@ -135,14 +209,19 @@ footer {
     width: 150px;
   }
 
-  .homepage h1.main-title {
+  .homepage h1.main-title,
+  .script-page h1.script-name {
     font-size: 4rem;
     line-height: 4.5rem;
-    margin: 50px 0;
+    padding: 0 0 50px 0;
   }
 
-  .homepage .scripts-grid {
+  .homepage .scripts-grid,
+  .script-page .split-view {
     grid-template-columns: 1fr;
-    gap: 25px;
+  }
+
+  .script-page .slider {
+    height: 300px;
   }
 }

@@ -13,9 +13,41 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+ul,
+li {
+  margin: revert;
+  padding: revert;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
 a {
   color: inherit;
   text-decoration: underline;
+}
+
+.btn {
+  padding: 12px 20px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  letter-spacing: -0.05px;
+  outline: none;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background: #f09819;
+  color: white;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.btn:hover,
+.btn:active {
+  transform: scale(1.05);
 }
 
 .container {
@@ -25,7 +57,7 @@ a {
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-  max-width: 1700px;
+  max-width: 1500px;
   padding: 50px;
 }
 
@@ -46,29 +78,28 @@ header .brand {
   width: 200px;
 }
 
-header .discord {
-  display: block;
+header .btn-discord {
+  display: flex;
+  font-size: 1rem;
+  background: #5865f2;
+}
+
+header .btn-discord img {
+  width: 20px;
+  margin-right: 10px;
 }
 
 /* Homepage */
 
 .homepage h1.main-title {
-  font-size: 7rem;
+  font-size: 6rem;
   line-height: 7rem;
   letter-spacing: -0.05rem;
   font-weight: 700;
   padding: 50px 0 100px 0;
-  background: #ff512f; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #ff512f,
-    #f09819
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #ff512f,
-    #f09819
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #ff512f;
+  background: -webkit-linear-gradient(to top, #ff512f, #f09819);
+  background: linear-gradient(to top, #ff512f, #f09819);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -82,17 +113,21 @@ header .discord {
 }
 
 .homepage .script {
+  transition: 0.2s ease-in-out;
+}
+.homepage .script:hover {
+  transform: scale(1.05);
 }
 
 .homepage .script img {
   display: block;
-  border-radius: 10px;
+  width: 100%;
+  border-radius: 20px;
   background: grey;
-  height: 350px;
+  border: 3px solid #ff512f;
 }
 
-.script-page {
-}
+/* Script Page */
 
 .script-page h1.script-name {
   font-size: 5rem;
@@ -135,13 +170,13 @@ header .discord {
 
 .script-page .split-view {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 50px;
 }
 
 .script-page .slider {
   width: 100%;
-  height: 450px;
+  height: 700px;
   position: relative;
   overflow: hidden;
   border-radius: 15px;
@@ -160,17 +195,22 @@ header .discord {
   object-fit: cover;
 }
 
-.script-page .slider .btn {
+.script-page .slider button {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
+  width: 60px;
+  height: 60px;
+  padding-bottom: 10px;
   border: none;
   border-radius: 50%;
   z-index: 10px;
   cursor: pointer;
-  background-color: #fff;
-  font-size: 18px;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 3.25rem;
+  line-height: 0;
+  font-weight: normal;
+  color: #999;
+  backdrop-filter: blur(2px);
+  transition: 0.2s;
 }
 .script-page .slider .btn:active {
   transform: scale(1.1);
@@ -186,8 +226,34 @@ header .discord {
 
 .script-page .script-description {
   text-align: left;
-  line-height: 2rem;
-  font-size: 1.25rem;
+  line-height: 2.4rem;
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+.script-page .script-actions {
+  display: flex;
+  margin-bottom: 50px;
+}
+.script-page .script-actions .btn {
+  margin-right: 20px;
+}
+
+.script-page .btn.btn-tebex {
+  display: flex;
+  align-items: center;
+  background: #164494;
+}
+.script-page .btn.btn-youtube {
+  background: #eb4d4b;
+}
+.script-page .btn.btn-tebex img {
+  height: 13px;
+  margin-left: 10px;
+}
+.script-page .btn.btn-youtube img {
+  height: 15px;
+  margin-right: 10px;
 }
 
 /* Footer */

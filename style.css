@@ -11,6 +11,7 @@ body {
   background: #121212;
   color: rgb(234, 232, 222);
   -webkit-font-smoothing: antialiased;
+  min-width: 350px;
 }
 
 ul,
@@ -176,7 +177,8 @@ header .btn-discord img {
 
 .script-page .slider {
   width: 100%;
-  height: 700px;
+  height: 50vw;
+  max-height: 700px;
   position: relative;
   overflow: hidden;
   border-radius: 15px;
@@ -204,8 +206,8 @@ header .btn-discord img {
   border-radius: 50%;
   z-index: 10px;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.5);
-  font-size: 3.25rem;
+  background: rgba(0, 0, 0, 0.65);
+  font-size: 4rem;
   line-height: 0;
   font-weight: normal;
   color: #999;
@@ -216,11 +218,11 @@ header .btn-discord img {
   transform: scale(1.1);
 }
 .script-page .slider .btn-prev {
-  top: 45%;
+  top: calc(50% - 30px);
   left: 2%;
 }
 .script-page .slider .btn-next {
-  top: 45%;
+  top: calc(50% - 30px);
   right: 2%;
 }
 
@@ -267,8 +269,24 @@ footer {
 /* Mobile */
 
 @media screen and (max-width: 1000px) {
+  li {
+    margin-bottom: 5px;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .btn {
+    font-size: 1.25rem;
+  }
+
   .container {
-    padding: 20px;
+    padding: 17.5px;
+  }
+
+  header {
+    margin-bottom: 50px;
   }
 
   header .brand {
@@ -277,17 +295,37 @@ footer {
 
   .homepage h1.main-title,
   .script-page h1.script-name {
-    font-size: 4rem;
-    line-height: 4.5rem;
+    font-size: 3.5rem;
+    line-height: 4rem;
     padding: 0 0 50px 0;
   }
 
   .homepage .scripts-grid,
   .script-page .split-view {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .script-page .slider {
-    height: 300px;
+  }
+
+  .script-page .slider button {
+    width: 50px;
+    height: 50px;
+    font-size: 3rem;
+  }
+
+  .script-page .script-actions {
+    margin-bottom: 30px;
+  }
+
+  .script-page .btn.btn-tebex {
+    flex-direction: column;
+  }
+
+  .script-page .script-description {
+    text-align: left;
+    line-height: 1.8rem;
+    font-size: 1.15rem;
   }
 }

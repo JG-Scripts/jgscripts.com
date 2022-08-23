@@ -178,7 +178,7 @@ header .btn-discord img {
 .script-page .slider {
   width: 100%;
   height: 50vw;
-  max-height: 700px;
+  max-height: 790px;
   position: relative;
   overflow: hidden;
   border-radius: 15px;
@@ -203,6 +203,7 @@ header .btn-discord img {
   height: 60px;
   padding-bottom: 10px;
   border: none;
+  outline: none;
   border-radius: 50%;
   z-index: 10px;
   cursor: pointer;
